@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+// light theme
+:root {
+  --background: hsl(0, 0%, 100%); // background
+  --header-background: hsl(225, 100%, 98%); // top background pattern
+  --card-background: hsl(227, 47%, 96%); // card background
+  --text-1: hsl(228, 12%, 44%); // text
+  --text-2: hsl(230, 17%, 14%); // text
+
+  // Primary colors
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --youTube: hsl(348, 97%, 39%);
+
+  // toggles
+  --toggle-light: hsl(230, 22%, 74%);
+}
+
+// dark theme
+.dark {
+  --background: hsl(230, 17%, 14%); // background
+  --header-background: hsl(232, 19%, 15%); // top background pattern
+  --card-background: hsl(228, 28%, 20%); // card background
+  --text-1: hsl(228, 34%, 66%); // text
+  --text-2: hsl(0, 0%, 100%); // text
+  --toggle-dark: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+}
+
+// ------------------- global styles --------------------------
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  color: var(--text-1);
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  padding-top: 1.7rem;
+  background-color: var(--header-background);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-bottom: 7rem;
+
+  .text {
+    h1 {
+      font-weight: 700;
+      margin-bottom: 0;
+      color: var(--text-2);
+    }
+
+    p {
+      margin-top: 0;
+      font-weight: 600;
+    }
+  }
+
+  .toggle {
+    .toggle-btn {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 3.2rem;
+      height: 1.5rem;
+      border-radius: 50px;
+      background: var(--toggle-light);
+      cursor: pointer;
+      margin-left: 1rem;
+      z-index: 5;
+      position: relative;
+
+      .ball {
+        background-color: white;
+        border-radius: 50%;
+        width: 1.2rem;
+        height: 1.2rem;
+        transition: 0.2s transform linear;
+        background: var(--card-background);
+        position: absolute;
+        right: 2px;
+        top: 2px;
+      }
+    }
+    .check {
+      position: absolute;
+      left: -99999px;
+
+      &:checked + .toggle-btn .ball {
+        transform: translateX(-1.7rem);
+      }
+    }
+
+    span {
+      font-weight: 700;
+      color: var(--toggle-light);
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.big-cards {
+  margin-top: -5rem;
+  .card-container {
+    min-height: 200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 2rem;
+    align-items: start;
+
+    .card {
+      display: grid;
+      justify-items: center;
+      text-align: center;
+      background: var(--card-background);
+      padding: 1rem;
+      overflow: hidden;
+      border-radius: 5px;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+
+      small {
+        font-weight: 700;
+        margin-left: 0.5rem;
+      }
+
+      h2 {
+        font-size: 3.7rem;
+        margin: 1rem 0 0;
+        color: var(--text-2);
+      }
+
+      p {
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 0.8rem;
+      }
+
+      .numb {
+        margin-top: 1rem;
+      }
+    }
+
+    .fb {
+      border-top: 4px solid var(--facebook);
+    }
+
+    .tw {
+      border-top: 4px solid var(--twitter);
+    }
+
+    .inst {
+      border-top: 4px solid transparent;
+      border-image: var(--instagram);
+      border-image-slice: 1;
+    }
+
+    .yt {
+      border-top: 4px solid var(--youTube);
+    }
+  }
+}

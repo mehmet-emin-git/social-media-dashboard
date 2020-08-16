@@ -11,7 +11,7 @@
       href="./images/favicon-32x32.png"
     />
     <title>Social Media Dashboard with Theme Switcher</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <style>
       .attribution {
         font-size: 11px;
@@ -23,63 +23,84 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <header class="flex">
+    <header>
+      <div class="container flex">
         <div class="text">
-          <h2>Social Media Dashboard</h2>
+          <h1>Social Media Dashboard</h1>
           <p>Total Followers: 23,004</p>
         </div>
-        <div class="toggle">
+        <div class="toggle flex">
           <span>Dark Mode</span>
-          <label for="pill"></label>
           <input
+            class="check"
             type="checkbox"
             name="pill"
-            id="toggle"
+            id="pill"
             aria-label="checkbox"
+            unchecked
           />
+          <label for="pill" class="toggle-btn">
+            <div class="ball"></div>
+          </label>
         </div>
-      </header>
-    </div>
+      </div>
+    </header>
+
     <section class="big-cards">
       <div class="container">
         <div class="card-container">
-          <div class="card">
-            <img src="images/icon-facebook.svg" alt="facebook icon" />
-            <small>@nathanf</small>
-            <h1>1987</h1>
+          <div class="card fb">
+            <div class="flex-c">
+              <img src="images/icon-facebook.svg" alt="facebook icon" />
+              <small>@nathanf</small>
+            </div>
+            <h2>1987</h2>
             <p>Followers</p>
-            <span><img src="images/icon-up.svg" alt="up arrow icon" /></span>
-            <small>12 Today</small>
+            <div class="flex-c numb">
+              <span><img src="images/icon-up.svg" alt="up arrow icon" /></span>
+              <small>12 Today</small>
+            </div>
           </div>
 
-          <div class="card">
-            <img src="images/icon-twitter.svg" alt="twitter icon" />
-            <small>@nathanf</small>
-            <h1>1044</h1>
+          <div class="card tw">
+            <div class="flex-c">
+              <img src="images/icon-twitter.svg" alt="twitter icon" />
+              <small>@nathanf</small>
+            </div>
+            <h2>1044</h2>
             <p>Followers</p>
-            <span><img src="images/icon-up.svg" alt="up arrow icon" /></span>
-            <small>99 Today</small>
+            <div class="flex-c numb">
+              <span><img src="images/icon-up.svg" alt="up arrow icon" /></span>
+              <small>99 Today</small>
+            </div>
           </div>
 
-          <div class="card">
-            <img src="images/icon-instagram.svg" alt="instagram icon" />
-            <small>@realnathanf</small>
-            <h1>11k</h1>
+          <div class="card inst">
+            <div class="flex-c">
+              <img src="images/icon-instagram.svg" alt="instagram icon" />
+              <small>@realnathanf</small>
+            </div>
+            <h2>11k</h2>
             <p>Followers</p>
-            <span><img src="images/icon-up.svg" alt="up arrow icon" /></span>
-            <small>1099 Today</small>
+            <div class="flex-c numb">
+              <span><img src="images/icon-up.svg" alt="up arrow icon" /></span>
+              <small>1099 Today</small>
+            </div>
           </div>
 
-          <div class="card">
-            <img src="images/icon-youtube.svg" alt="youtube icon" />
-            <small>Nathan F.</small>
-            <h1>8239</h1>
+          <div class="card yt">
+            <div class="flex-c">
+              <img src="images/icon-youtube.svg" alt="youtube icon" />
+              <small>Nathan F.</small>
+            </div>
+            <h2>8239</h2>
             <p>Subscribers</p>
-            <span
-              ><img src="images/icon-down.svg" alt="down arrow icon"
-            /></span>
-            <small>144 Today</small>
+            <div class="flex-c numb">
+              <span
+                ><img src="images/icon-down.svg" alt="down arrow icon"
+              /></span>
+              <small class="">144 Today</small>
+            </div>
           </div>
         </div>
       </div>
@@ -219,15 +240,12 @@
       </div>
     </section>
 
-    Overview - Today Page Views 87 3% Likes 52 2% Likes 5462 2257% Profile Views
-    52k 1375% Retweets 117 303% Likes 507 553% Likes 107 19% Total Views 1407
-    12%
-
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Mechitoua Mohammed Amine</a>.
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
