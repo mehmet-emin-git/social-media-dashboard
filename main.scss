@@ -165,12 +165,21 @@ header {
 
       p {
         text-transform: uppercase;
+        margin-top: 0;
         letter-spacing: 4px;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
       }
 
       .numb {
         margin-top: 1rem;
+      }
+
+      .green {
+        color: var(--lime-green);
+      }
+
+      .red {
+        color: var(--bright-red);
       }
     }
 
