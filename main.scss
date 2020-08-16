@@ -132,55 +132,58 @@ header {
   }
 }
 
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 2rem;
+  align-items: start;
+
+  .card {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    background: var(--card-background);
+    padding: 1rem;
+    overflow: hidden;
+    border-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+}
+
 .big-cards {
   margin-top: -5rem;
   .card-container {
     min-height: 200px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 2rem;
-    align-items: start;
 
-    .card {
-      display: grid;
-      justify-items: center;
-      text-align: center;
-      background: var(--card-background);
-      padding: 1rem;
-      overflow: hidden;
-      border-radius: 5px;
-      border-top-right-radius: 5px;
-      border-top-left-radius: 5px;
+    small {
+      font-weight: 700;
+      margin-left: 0.5rem;
+    }
 
-      small {
-        font-weight: 700;
-        margin-left: 0.5rem;
-      }
+    h2 {
+      font-size: 3.7rem;
+      margin: 1rem 0 0;
+      color: var(--text-2);
+    }
 
-      h2 {
-        font-size: 3.7rem;
-        margin: 1rem 0 0;
-        color: var(--text-2);
-      }
+    p {
+      text-transform: uppercase;
+      margin-top: 0;
+      letter-spacing: 4px;
+      font-size: 0.9rem;
+    }
 
-      p {
-        text-transform: uppercase;
-        margin-top: 0;
-        letter-spacing: 4px;
-        font-size: 0.9rem;
-      }
+    .numb {
+      margin-top: 1rem;
+    }
 
-      .numb {
-        margin-top: 1rem;
-      }
+    .green {
+      color: var(--lime-green);
+    }
 
-      .green {
-        color: var(--lime-green);
-      }
-
-      .red {
-        color: var(--bright-red);
-      }
+    .red {
+      color: var(--bright-red);
     }
 
     .fb {
@@ -199,6 +202,41 @@ header {
 
     .yt {
       border-top: 4px solid var(--youTube);
+    }
+  }
+}
+
+.overview {
+  margin-top: 3rem;
+
+  .card {
+    padding: 1.7rem 1.5rem;
+  }
+
+  .views {
+    width: 100%;
+
+    p {
+      font-weight: 700;
+      margin: 0;
+    }
+  }
+
+  .number {
+    width: 100%;
+
+    h3 {
+      font-size: 2.2rem;
+      color: var(--text-2);
+      margin: 1.5rem 0 0;
+    }
+  }
+
+  .percentage {
+    margin-top: 2.7rem;
+    small {
+      font-weight: 700;
+      margin-left: 0.5rem;
     }
   }
 }
