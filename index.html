@@ -12,15 +12,6 @@
     />
     <title>Social Media Dashboard with Theme Switcher</title>
     <link rel="stylesheet" href="./css/main.css" />
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -30,7 +21,7 @@
           <p>Total Followers: 23,004</p>
         </div>
         <div class="toggle flex">
-          <span>Dark Mode</span>
+          <span id="mode">Dark Mode</span>
           <input
             class="check"
             type="checkbox"
@@ -114,9 +105,9 @@
             </div>
             <div class="number flex">
               <h3>87</h3>
-              <div class="percentage flex-c">
+              <div class="percentage flex-c green">
                 <img src="images/icon-up.svg" alt="up arrow icon" />
-                <small>3%</small>
+                <small class="green">3%</small>
               </div>
             </div>
           </div>
@@ -130,7 +121,7 @@
               <h3>52</h3>
               <div class="percentage flex-c">
                 <img src="images/icon-down.svg" alt="down arrow icon" />
-                <small>2%</small>
+                <small class="red">2%</small>
               </div>
             </div>
           </div>
@@ -142,9 +133,9 @@
             </div>
             <div class="number flex">
               <h3>5462</h3>
-              <div class="percentage flex-c">
+              <div class="percentage flex-c green">
                 <img src="images/icon-up.svg" alt="up arrow icon" />
-                <small>2257%</small>
+                <small class="green">2257%</small>
               </div>
             </div>
           </div>
@@ -160,7 +151,7 @@
                 <span
                   ><img src="images/icon-up.svg" alt="up arrow icon"
                 /></span>
-                <small>1375%</small>
+                <small class="green">1375%</small>
               </div>
             </div>
           </div>
@@ -174,7 +165,7 @@
               <h3>117</h3>
               <div class="percentage flex-c">
                 <img src="images/icon-up.svg" alt="up arrow icon" />
-                <small>303%</small>
+                <small class="green">303%</small>
               </div>
             </div>
           </div>
@@ -188,7 +179,7 @@
               <h3>507</h3>
               <div class="percentage flex-c">
                 <img src="images/icon-up.svg" alt="up arrow icon" />
-                <small>553%</small>
+                <small class="green">553%</small>
               </div>
             </div>
           </div>
@@ -202,7 +193,7 @@
               <h3>107</h3>
               <div class="percentage flex-c">
                 <img src="images/icon-down.svg" alt="down arrow icon" />
-                <small>19%</small>
+                <small class="red">19%</small>
               </div>
             </div>
           </div>
@@ -216,7 +207,7 @@
               <h3>1407</h3>
               <div class="percentage flex-c">
                 <img src="images/icon-down.svg" alt="down arrow icon" />
-                <small>12%</small>
+                <small class="red">12%</small>
               </div>
             </div>
           </div>
@@ -224,12 +215,12 @@
       </div>
     </section>
 
-    <div class="attribution">
+    <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Mechitoua Mohammed Amine</a>.
-    </div>
+    </div> -->
     <script src="script.js"></script>
   </body>
 </html>

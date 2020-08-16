@@ -1,40 +1,20 @@
-// // function to set a given theme/color-scheme
-// function setTheme(themeName) {
-//   localStorage.setItem("theme", themeName);
-//   document.documentElement.className = themeName;
-// }
-// // function to toggle between light and dark theme
-// function toggleTheme() {
-//   if (localStorage.getItem("theme") === "theme-dark") {
-//     setTheme("theme-light");
-//   } else {
-//     setTheme("theme-dark");
-//   }
-// }
-// // Immediately invoked function to set the theme on initial load
-// (function () {
-//   if (localStorage.getItem("theme") === "theme-dark") {
-//     setTheme("theme-dark");
-//   } else {
-//     setTheme("theme-light");
-//   }
-// })();
-
 // check for saved 'darkMode' in localStorage
 let darkMode = localStorage.getItem("darkMode");
-
-const darkModeToggle = document.querySelector("#dark-mode-toggle");
+const modeText = document.getElementById("mode");
+const darkModeToggle = document.querySelector(".toggle-btn");
 
 const enableDarkMode = () => {
   // 1. Add the class to the body
-  document.body.classList.add("darkmode");
+  document.body.classList.add("dark");
+  modeText.innerText = "Light Mode";
   // 2. Update darkMode in localStorage
   localStorage.setItem("darkMode", "enabled");
 };
 
 const disableDarkMode = () => {
   // 1. Remove the class from the body
-  document.body.classList.remove("darkmode");
+  document.body.classList.remove("dark");
+  modeText.innerText = "Dark Mode";
   // 2. Update darkMode in localStorage
   localStorage.setItem("darkMode", null);
 };
