@@ -167,7 +167,6 @@ header {
     text-align: center;
     background: var(--card-background);
     padding: 1rem;
-    background-clip: padding-box;
     border-radius: 5px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -219,7 +218,6 @@ header {
       border-top: 4px solid;
       border-image: var(--instagram);
       border-image-slice: 1;
-      background-clip: border-box;
     }
 
     .yt {
